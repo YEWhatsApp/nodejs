@@ -113,7 +113,7 @@ app.listen(3000, err => {
 
         throw err
 
-    console.log('Server listening on port', port)
+    console.log('Server listening on port')
 })
 
 
