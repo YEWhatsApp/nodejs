@@ -1,6 +1,6 @@
 var express = require('express')
+var multer = require('multer');
 
-var app = express();
 
 var bodyParser = require('body-parser');
 
@@ -11,7 +11,7 @@ var imgSchema = require('./img.js');
 var fs = require('fs');
 
 var path = require('path');
-
+var app = express();
 app.set("view engine", "ejs");
 
 
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
  
 
-var multer = require('multer');
+
  
 
 var storage = multer.diskStorage({
