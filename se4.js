@@ -14,7 +14,7 @@ var path = require('path');
 
 app.set("view engine", "ejs");
 
-require('dotenv').config(); 
+
 mongoose.connect("mongodb+srv://ziad:ziad2321@nodejsproject.qb18fmw.mongodb.net/?retryWrites=true&w=majority")
 
 .then(console.log("DB Connected"))
@@ -106,8 +106,8 @@ app.post('/', upload.single('image'), (req, res, next) => {
 });
  
 
-var port = process.env.PORT || '3000'
-app.listen(port, err => {
+
+app.listen(3000, err => {
 
     if (err)
 
