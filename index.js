@@ -15,9 +15,9 @@ const {
 const multer = require('multer');
 
 const app =express();
-app.use((req, res, next) => {
+/*app.use((req, res, next) => {
   res.status(404).send('status');
-});
+});*/
 const firebaseConfig = {
   apiKey: "AIzaSyCp6A7rkCe1HwZOxCd2DkV1uOZBjabGkuM",
   authDomain: "zinode-8e2a4.firebaseapp.com",
