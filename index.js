@@ -114,7 +114,7 @@ await request(url).pipe(res);
 //var storageRef = firestor.ref();
 //var uploadTask = ref(firestore, 'products/' + filename);
 var img = ref(firestore,"products/171yyy71174-folder.jpg" );  
-//var uploadTask = uploadBytesResumable(img , file.buffer);
+var uploadTask = uploadBytesResumable(img , file.buffer);
 //var r =firestor.storage.ref();
 //console.log(img);
 //const fun = require("./fun.js");
