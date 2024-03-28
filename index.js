@@ -1,9 +1,9 @@
 const express = require("express");
 //const fun =require(__dirname + "/up2.ejs");
-//const firestor = require("firebase/app");
+const firestor = require("firebase/app");
 //console.log(firestor.ref);
 //import "firebase/storage";
-/*
+
 const { initializeApp } = require('firebase/app');
 const {
   getStorage,
@@ -13,9 +13,9 @@ const {
   getDownloadURL,
 } = require('firebase/storage');
 const multer = require('multer');
-*/
+
 const app =express();
-/*app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.status(404).send('status');
 });
 const firebaseConfig = {
@@ -92,8 +92,8 @@ app.get('/:id',(req,res)=>{
 console.log(req.params)
 });
 
-app.post('/',/*upload.single('image'),*/ async (req, res, next) => {
-  //const file = req.file;
+app.post('/',upload.single('image'), async (req, res, next) => {
+  const file = req.file;
 //res.redirect('/');
 //let time =new Date();
 //console.log(res)
@@ -108,7 +108,7 @@ res.set(
 await request(url).pipe(res);   
 */
 //res.redirect('/')
-/*  try {
+  try {
     const filename = new Date().getTime() + '-' + file.originalname;
   const imageRef = ref(firestore, 'products/' + filename);
 //var storageRef = firestor.ref();
@@ -139,7 +139,7 @@ request("http://localhost:3000").pipe(res);
 //      s = progress ;
      // res.render(__dirname + "/up2.ejs",{size:progress}); 
      
-});*/
+});
 //module.exports ={get(){console.log("hh")}};
 //    const snapshot = await uploadBytes(imageRef, file.buffer);
     //const imageURL = await getDownloadURL(snapshot.ref);
@@ -148,12 +148,13 @@ request("http://localhost:3000").pipe(res);
 //    console.log(pathReference)
     //res.status(200).send(imageURL);
     //res.redirect("https://firebasestorage.googleapis.com/v0/b/zinode-8e2a4.appspot.com/o/products%2F1711235971174-folder.jpg?alt=media&token=030c41c4-5ade-47c9-b75e-612187336b8d")
-//res.redirect('/')
-  /*
+*/
+res.redirect('/')
+  
   } catch (error) {
     console.log(error);
    return ;
-  }*/
+  }
 });
 
 
