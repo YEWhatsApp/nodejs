@@ -3,6 +3,7 @@ const express = require("express");
 //const firestor = require("firebase/app");
 //console.log(firestor.ref);
 //import "firebase/storage";
+/*
 const { initializeApp } = require('firebase/app');
 const {
   getStorage,
@@ -12,11 +13,11 @@ const {
   getDownloadURL,
 } = require('firebase/storage');
 const multer = require('multer');
-
+*/
 const app =express();
 /*app.use((req, res, next) => {
   res.status(404).send('status');
-});*/
+});
 const firebaseConfig = {
   apiKey: "AIzaSyCp6A7rkCe1HwZOxCd2DkV1uOZBjabGkuM",
   authDomain: "zinode-8e2a4.firebaseapp.com",
@@ -50,7 +51,7 @@ const upload = multer({ storage });
 */
 var s = "heloo ";
 //const func = require("./fun");
-let i  ={get(){return s ;}};
+//let i  ={get(){return s ;}};
 //console.log(i );
 var si=15 ;
 //const db = require("firebase-admin/database");
@@ -76,7 +77,7 @@ var xhr = new XMLHttpRequest();
 
 */ 
 
-res.render(__dirname + "/up2.ejs",{size:si,fun : func,i : i  });
+res.render(__dirname + "/up2.ejs",{size:si,i : i  });
 //res.write(`<div>zoufuf </div>`)
 
 /*
@@ -91,10 +92,10 @@ app.get('/:id',(req,res)=>{
 console.log(req.params)
 });
 
-app.post('/',upload.single('image'), async (req, res, next) => {
-  const file = req.file;
+app.post('/',/*upload.single('image'),*/ async (req, res, next) => {
+  //const file = req.file;
 //res.redirect('/');
-let time =new Date();
+//let time =new Date();
 //console.log(res)
 //res.write (`<div>${time}</div>`)
 /*
@@ -107,7 +108,7 @@ res.set(
 await request(url).pipe(res);   
 */
 //res.redirect('/')
-  try {
+/*  try {
     const filename = new Date().getTime() + '-' + file.originalname;
   const imageRef = ref(firestore, 'products/' + filename);
 //var storageRef = firestor.ref();
@@ -148,10 +149,11 @@ request("http://localhost:3000").pipe(res);
     //res.status(200).send(imageURL);
     //res.redirect("https://firebasestorage.googleapis.com/v0/b/zinode-8e2a4.appspot.com/o/products%2F1711235971174-folder.jpg?alt=media&token=030c41c4-5ade-47c9-b75e-612187336b8d")
 //res.redirect('/')
+  /*
   } catch (error) {
     console.log(error);
    return ;
-  }
+  }*/
 });
 
 
