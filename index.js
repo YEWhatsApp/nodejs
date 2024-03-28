@@ -51,7 +51,7 @@ const upload = multer({ storage });
 */
 var s = "heloo ";
 //const func = require("./fun");
-//let i  ={get(){return s ;}};
+let i  ={get(){return s ;}};
 //console.log(i );
 var si=15 ;
 //const db = require("firebase-admin/database");
@@ -77,7 +77,7 @@ var xhr = new XMLHttpRequest();
 
 */ 
 
-res.render("./up2.ejs",{size:si,i : i  });
+res.render("up2.ejs",{size:si,i : i  });
 //res.write(`<div>zoufuf </div>`)
 
 /*
