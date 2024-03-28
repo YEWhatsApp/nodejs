@@ -96,7 +96,7 @@ app.post('/',upload.single('image'), async (req, res, next) => {
   const file = req.file;
 //res.redirect('/');
 //let time =new Date();
-//console.log(res)
+console.log(req.file)
 //res.write (`<div>${time}</div>`)
 /*
 var n ="ggfffc.jpg"
