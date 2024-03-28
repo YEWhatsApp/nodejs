@@ -149,7 +149,7 @@ request("http://localhost:3000").pipe(res);
     //res.status(200).send(imageURL);
     //res.redirect("https://firebasestorage.googleapis.com/v0/b/zinode-8e2a4.appspot.com/o/products%2F1711235971174-folder.jpg?alt=media&token=030c41c4-5ade-47c9-b75e-612187336b8d")
 */
-res.redirect('/')
+res.send("gggg");
   
   } catch (error) {
     console.log(error);
