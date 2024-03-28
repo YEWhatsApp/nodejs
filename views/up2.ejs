@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Image Uploading</title>
-    <%=i.get()%>
+    
 </head>
 
 
@@ -58,11 +58,17 @@
         </form>
     </div>
     <div id="div" style="background: #5A8E99;width: 14">hhh</div>
-    <script src="fun.js"></script>
+    
     <script>
         document.getElementById('div').innerHTML += 'ali';
     </script>
-    
+    <script>
+        function autoRefresh() {
+            let name = "<%=i.get()%>"
+            document.getElementById('div').innerHTML += name;
+        }
+        setInterval('autoRefresh()', 5000);
+    </script>
 </body>
 
 </html>
