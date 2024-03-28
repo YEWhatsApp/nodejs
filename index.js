@@ -77,7 +77,7 @@ var xhr = new XMLHttpRequest();
 
 */ 
 
-res.render(__dirname + "/up2.ejs",{size:si,i : i  });
+res.render("./up2.ejs",{size:si,i : i  });
 //res.write(`<div>zoufuf </div>`)
 
 /*
