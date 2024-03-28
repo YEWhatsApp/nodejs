@@ -29,11 +29,11 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 const firestore = getStorage(firebaseApp);
-const request = require('superagent')
+//const request = require('superagent')
 // Multer setup
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
-function progress_middleware(req, res, next){
+/*function progress_middleware(req, res, next){
     let progress = 0;
     const file_size = req.headers["content-length"];
     
@@ -47,9 +47,9 @@ function progress_middleware(req, res, next){
     // invoke next middleware
     next();
 }
-
+*/
 var s = "heloo ";
-const func = require("./fun");
+//const func = require("./fun");
 let i  ={get(){return s ;}};
 //console.log(i );
 var si=15 ;
@@ -57,7 +57,7 @@ var si=15 ;
 //const dbd = db.getDatabase();
 //const re =db.child('user');
 // re.set({name:"ali"});
-console.log(firebaseApp.getDatabase());
+//console.log(firebaseApp.getDatabase());
 app.get('/',(req,res)=>{
 //const imageURL = await getDownloadURL(snapshot.ref);
 //    var pathReference =ref('folder.jpg')
