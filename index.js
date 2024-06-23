@@ -88,13 +88,13 @@ res.set(
 request(url).pipe(res);*/
 //res.redirect('/')
 });
-app.get('/:id',(req,res)=>{
+app.get('/:id',async (req,res)=>{
   var url2 ="https://firebasestorage.googleapis.com/v0/b/zinode-8e2a4.appspot.com/o/products%2F1711235971174-folder.jpg?alt=media&token=030c41c4-5ade-47c9-b75e-612187336b8d"
 res.set(
      'Content-Disposition',
      'attachment; filename=some_file_name.png'
    );
-request(url2).pipe(res);
+await request(url2).pipe(res);
 res.redirect('/')
 console.log(req.params)
 });
