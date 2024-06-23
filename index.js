@@ -49,7 +49,7 @@ const upload = multer({ storage });
     next();
 }
 */
-var s = "heloo ";
+var s = 0;
 //const func = require("./fun");
 let i  ={get(){return s ;}};
 //console.log(i );
@@ -132,19 +132,19 @@ var uploadTask = uploadBytesResumable(img , file.buffer);
   // 1. 'state_changed' observer, called any time the state changes
   // 2. Error observer, called on failure
   // 3. Completion observer, called on successful completion
-  /* 
+  
 uploadTask.on('state_changed', 
     (snapshot) => {
       // Observe state change events such as progress, pause, and resume
       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       console.log('Upload is ' + progress + '% done');
-si =progress ;
-    res.set(
-     'Content-Disposition',
-     //'attachment; filename=some_file_name.png'
-   );
-request("http://localhost:3000").pipe(res);
+s =progress ;
+   // res.set(
+    // 'Content-Disposition',
+   //  //'attachment; filename=some_file_name.png'
+//   );
+//request("http://localhost:3000").pipe(res);
 //      s = progress ;
      // res.render(__dirname + "/up2.ejs",{size:progress}); 
      
@@ -157,7 +157,7 @@ request("http://localhost:3000").pipe(res);
 //    console.log(pathReference)
     //res.status(200).send(imageURL);
     //res.redirect("https://firebasestorage.googleapis.com/v0/b/zinode-8e2a4.appspot.com/o/products%2F1711235971174-folder.jpg?alt=media&token=030c41c4-5ade-47c9-b75e-612187336b8d")
-*/
+
 res.send("gggg");
   
   } catch (error) {
