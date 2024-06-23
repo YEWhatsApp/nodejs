@@ -30,7 +30,7 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 const firestore = getStorage(firebaseApp);
-//const request = require('superagent')
+const request = require('superagent')
 // Multer setup
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
